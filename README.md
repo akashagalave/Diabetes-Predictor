@@ -44,6 +44,17 @@ Check out these snapshots of the Diabetes Predictor in action:
 
 
 
+📈 The result page, where your diabetes risk is displayed in a visually stunning way.:
+
+
+
+![alt text](<Screenshot (125).png>)
+
+
+
+
+
+
 
 
 
