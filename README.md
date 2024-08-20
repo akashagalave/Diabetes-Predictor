@@ -32,4 +32,21 @@ pip install -r requirements.txt
 python application.py
 
 
+🎨 Visuals
+Check out these snapshots of the Diabetes Predictor in action:
+
+
+🎛️ The sleek, intuitive form where you enter your data:
+
+![alt text](<Screenshot (124)-1.png>)
+
+
+
+
+
+
+
+
+
+
 
