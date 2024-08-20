@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>⚡ Prediction Result ⚡</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+        
+        body {
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            font-family: 'Orbitron', sans-serif;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: #00ff99;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            text-shadow: 0 0 10px #00ff99, 0 0 20px #00ff99, 0 0 30px #00ff99;
+            animation: flicker 2s infinite alternate;
+        }
+
+        .result {
+            font-size: 4rem;
+            color: #ff00ff;
+            text-shadow: 0 0 20px #ff00ff, 0 0 40px #ff00ff, 0 0 60px #ff00ff;
+            animation: neonGlow 1.5s infinite alternate, glitch 3s infinite;
+        }
+
+        @keyframes flicker {
+            0% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.8;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes neonGlow {
+            from {
+                text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff, 0 0 30px #ff00ff, 0 0 40px #ff00ff;
+            }
+            to {
+                text-shadow: 0 0 20px #ff00ff, 0 0 30px #ff00ff, 0 0 40px #ff00ff, 0 0 50px #ff00ff;
+            }
+        }
+
+        @keyframes glitch {
+            0% {
+                transform: translate(0, 0);
+            }
+            20% {
+                transform: translate(-2px, 2px);
+            }
+            40% {
+                transform: translate(2px, -2px);
+            }
+            60% {
+                transform: translate(-2px, -2px);
+            }
+            80% {
+                transform: translate(2px, 2px);
+            }
+            100% {
+                transform: translate(0, 0);
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Person is: <span class="result">{{result}}</span></h1>
+</body>
+</html>

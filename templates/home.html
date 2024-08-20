@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>⚡ Diabetes Predictor ⚡</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+        
+        body {
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            font-family: 'Orbitron', sans-serif;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(8px);
+            text-align: center;
+            width: 100%;
+            max-width: 450px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: #00ff99;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 0 0 10px #00ff99;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 15px;
+            margin: 10px 0;
+            background: rgba(0, 0, 0, 0.7);
+            border: 1px solid #00ff99;
+            border-radius: 8px;
+            color: #00ff99;
+            font-size: 1rem;
+            font-weight: bold;
+            text-shadow: none;
+            transition: background 0.3s ease, border-color 0.3s ease;
+        }
+
+        input[type="text"]::placeholder {
+            color: #b3ffcc;
+        }
+
+        input[type="text"]:focus {
+            background: rgba(0, 0, 0, 0.9);
+            outline: none;
+            border-color: #00cc88;
+        }
+
+        button {
+            width: 100%;
+            padding: 15px;
+            background: #00ff99;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.2rem;
+            color: #000;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            text-transform: uppercase;
+            margin-top: 1.5rem;
+            box-shadow: 0 0 15px #00ff99, 0 0 30px #00ff99;
+        }
+
+        button:hover {
+            background: #00cc88;
+            box-shadow: 0 0 20px #00cc88, 0 0 40px #00cc88;
+        }
+
+        .footer {
+            margin-top: 2rem;
+            font-size: 0.9rem;
+            color: #b3ffcc;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Diabetes Predictor</h1>
+        <form action="{{ url_for('predict_datapoint')}}" method="post">
+            <input type="text" name="Pregnancies" placeholder="Pregnancies" required="required" /><br>
+            <input type="text" name="Glucose" placeholder="Glucose" required="required" /><br>
+            <input type="text" name="BloodPressure" placeholder="Blood Pressure" required="required" /><br>
+            <input type="text" name="SkinThickness" placeholder="Skin Thickness" required="required" /><br>
+            <input type="text" name="Insulin" placeholder="Insulin" required="required" /><br>
+            <input type="text" name="BMI" placeholder="BMI" required="required" /><br>
+            <input type="text" name="DiabetesPedigreeFunction" placeholder="Diabetes Pedigree Function" required="required" /><br>
+            <input type="text" name="Age" placeholder="Age" required="required" /><br>
+            <button type="submit">Predict</button>
+        </form>
+        <div class="footer">
+            {{result}}
+        </div>
+    </div>
+</body>
+</html>
